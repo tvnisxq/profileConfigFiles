@@ -1,0 +1,351 @@
+<svg width="1400" height="400" viewBox="0 0 1400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Liquid metallic silver gradient -->
+    <linearGradient id="liquidSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#e8e8e8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#b0b0b0;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#d0d0d0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Chrome metallic gradient -->
+    <linearGradient id="chromeText" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#e0e0e0;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#8a8a8a;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#c0c0c0;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#707070;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d8d8d8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 4-point star gradient -->
+    <radialGradient id="star4Point">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#e0e0e0;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#a0a0a0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#606060;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Plastic grey gradient for SD card -->
+    <linearGradient id="plasticGrey" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a5a5a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3a3a3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a4a4a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Metal surface for SD card -->
+    <linearGradient id="metalSurface" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8c8c8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#989898;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8b8b8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Cassette plastic -->
+    <linearGradient id="cassettePlastic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a2a;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- 3D depth filter -->
+    <filter id="depth3d" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="2" dy="3" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.6"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Black background -->
+  <rect width="1400" height="400" fill="#000000"/>
+  
+  <!-- WIREFRAME GRID BACKGROUND (Full coverage) -->
+  <g stroke="#404040" fill="none" opacity="0.4">
+    <!-- Horizontal perspective grid lines -->
+    <path d="M 0 320 Q 350 300 700 320 T 1400 320" stroke-width="0.8">
+      <animate attributeName="d" 
+        values="M 0 320 Q 350 300 700 320 T 1400 320;
+                M 0 320 Q 350 305 700 320 T 1400 320;
+                M 0 320 Q 350 300 700 320 T 1400 320"
+        dur="5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 0 340 Q 350 325 700 340 T 1400 340" stroke-width="0.8">
+      <animate attributeName="d" 
+        values="M 0 340 Q 350 325 700 340 T 1400 340;
+                M 0 340 Q 350 330 700 340 T 1400 340;
+                M 0 340 Q 350 325 700 340 T 1400 340"
+        dur="5.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 0 360 Q 350 348 700 360 T 1400 360" stroke-width="0.8">
+      <animate attributeName="d" 
+        values="M 0 360 Q 350 348 700 360 T 1400 360;
+                M 0 360 Q 350 353 700 360 T 1400 360;
+                M 0 360 Q 350 348 700 360 T 1400 360"
+        dur="6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 0 380 Q 350 372 700 380 T 1400 380" stroke-width="0.6"/>
+    <path d="M 0 395 Q 350 390 700 395 T 1400 395" stroke-width="0.5"/>
+    
+    <!-- Top area grid -->
+    <path d="M 0 80 Q 350 65 700 80 T 1400 80" stroke-width="0.6" opacity="0.3">
+      <animate attributeName="d" 
+        values="M 0 80 Q 350 65 700 80 T 1400 80;
+                M 0 80 Q 350 70 700 80 T 1400 80;
+                M 0 80 Q 350 65 700 80 T 1400 80"
+        dur="7s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 0 100 Q 350 88 700 100 T 1400 100" stroke-width="0.6" opacity="0.3"/>
+    
+    <!-- Vertical grid lines -->
+    <line x1="100" y1="80" x2="100" y2="400" stroke-width="0.5" opacity="0.3"/>
+    <line x1="200" y1="70" x2="200" y2="400" stroke-width="0.5"/>
+    <line x1="300" y1="65" x2="300" y2="400" stroke-width="0.5"/>
+    <line x1="400" y1="60" x2="400" y2="400" stroke-width="0.6"/>
+    <line x1="500" y1="58" x2="500" y2="400" stroke-width="0.6"/>
+    <line x1="600" y1="56" x2="600" y2="400" stroke-width="0.7"/>
+    <line x1="700" y1="55" x2="700" y2="400" stroke-width="0.7"/>
+    <line x1="800" y1="56" x2="800" y2="400" stroke-width="0.7"/>
+    <line x1="900" y1="58" x2="900" y2="400" stroke-width="0.6"/>
+    <line x1="1000" y1="60" x2="1000" y2="400" stroke-width="0.6"/>
+    <line x1="1100" y1="65" x2="1100" y2="400" stroke-width="0.5"/>
+    <line x1="1200" y1="70" x2="1200" y2="400" stroke-width="0.5"/>
+    <line x1="1300" y1="80" x2="1300" y2="400" stroke-width="0.5" opacity="0.3"/>
+  </g>
+  
+  <!-- FLOATING DATA PARTICLES (scattered throughout) -->
+  <circle cx="150" cy="110" r="2" fill="#ffffff" opacity="0.8">
+    <animate attributeName="cy" values="110;105;110" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="280" cy="140" r="2.5" fill="#ffffff" opacity="0.7">
+    <animate attributeName="cy" values="140;135;140" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="420" cy="95" r="2" fill="#ffffff" opacity="0.9">
+    <animate attributeName="cy" values="95;90;95" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="560" cy="125" r="1.8" fill="#ffffff" opacity="0.6">
+    <animate attributeName="cy" values="125;120;125" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="820" cy="115" r="2.5" fill="#ffffff" opacity="0.8">
+    <animate attributeName="cy" values="115;110;115" dur="3.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="980" cy="135" r="2" fill="#ffffff" opacity="0.7">
+    <animate attributeName="cy" values="135;130;135" dur="4.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1150" cy="105" r="2.2" fill="#ffffff" opacity="0.9">
+    <animate attributeName="cy" values="105;100;105" dur="3.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1280" cy="145" r="2" fill="#ffffff" opacity="0.6">
+    <animate attributeName="cy" values="145;140;145" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Bottom area particles -->
+  <circle cx="220" cy="310" r="2" fill="#ffffff" opacity="0.5">
+    <animate attributeName="cy" values="310;305;310" dur="3.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="480" cy="330" r="2.5" fill="#ffffff" opacity="0.6">
+    <animate attributeName="cy" values="330;325;330" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="750" cy="315" r="2" fill="#ffffff" opacity="0.7">
+    <animate attributeName="cy" values="315;310;315" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1050" cy="325" r="2.2" fill="#ffffff" opacity="0.5">
+    <animate attributeName="cy" values="325;320;325" dur="4.2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- SD CARDS scattered throughout -->
+  <!-- SD Card 1 - Top Left -->
+  <g transform="translate(100, 50)" filter="url(#depth3d)" opacity="0.8">
+    <rect x="0" y="0" width="35" height="42" rx="2" fill="url(#plasticGrey)" stroke="#2a2a2a" stroke-width="1"/>
+    <path d="M 4 0 L 10 0 L 10 6 L 4 6 Z" fill="#1a1a1a"/>
+    <rect x="4" y="12" width="27" height="25" rx="1.5" fill="url(#metalSurface)"/>
+    <line x1="7" y1="15" x2="7" y2="34" stroke="#707070" stroke-width="0.4"/>
+    <line x1="11" y1="15" x2="11" y2="34" stroke="#707070" stroke-width="0.4"/>
+    <line x1="15" y1="15" x2="15" y2="34" stroke="#707070" stroke-width="0.4"/>
+    <line x1="19" y1="15" x2="19" y2="34" stroke="#707070" stroke-width="0.4"/>
+    <animateTransform attributeName="transform" type="translate" 
+      values="100,50; 100,45; 100,50" dur="4s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- SD Card 2 - Top Right -->
+  <g transform="translate(1260, 70)" filter="url(#depth3d)" opacity="0.7">
+    <rect x="0" y="0" width="30" height="36" rx="2" fill="url(#plasticGrey)" stroke="#2a2a2a" stroke-width="1"/>
+    <path d="M 3 0 L 8 0 L 8 5 L 3 5 Z" fill="#1a1a1a"/>
+    <rect x="3" y="10" width="24" height="22" rx="1" fill="url(#metalSurface)"/>
+    <line x1="6" y1="13" x2="6" y2="29" stroke="#707070" stroke-width="0.3"/>
+    <line x1="10" y1="13" x2="10" y2="29" stroke="#707070" stroke-width="0.3"/>
+    <line x1="14" y1="13" x2="14" y2="29" stroke="#707070" stroke-width="0.3"/>
+    <line x1="18" y1="13" x2="18" y2="29" stroke="#707070" stroke-width="0.3"/>
+    <animateTransform attributeName="transform" type="translate" 
+      values="1260,70; 1260,65; 1260,70" dur="5s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- SD Card 3 - Bottom Left -->
+  <g transform="translate(140, 290)" filter="url(#depth3d)" opacity="0.6">
+    <rect x="0" y="0" width="28" height="34" rx="2" fill="url(#plasticGrey)" stroke="#2a2a2a" stroke-width="0.8"/>
+    <path d="M 3 0 L 8 0 L 8 4 L 3 4 Z" fill="#1a1a1a"/>
+    <rect x="3" y="9" width="22" height="20" rx="1" fill="url(#metalSurface)"/>
+    <line x1="6" y1="11" x2="6" y2="27" stroke="#707070" stroke-width="0.3"/>
+    <line x1="10" y1="11" x2="10" y2="27" stroke="#707070" stroke-width="0.3"/>
+    <line x1="14" y1="11" x2="14" y2="27" stroke="#707070" stroke-width="0.3"/>
+    <line x1="18" y1="11" x2="18" y2="27" stroke="#707070" stroke-width="0.3"/>
+    <animateTransform attributeName="transform" type="translate" 
+      values="140,290; 140,285; 140,290" dur="4.5s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- SD Card 4 - Mid Right -->
+  <g transform="translate(1190, 260)" filter="url(#depth3d)" opacity="0.7">
+    <rect x="0" y="0" width="32" height="38" rx="2" fill="url(#plasticGrey)" stroke="#2a2a2a" stroke-width="1"/>
+    <path d="M 3 0 L 9 0 L 9 5 L 3 5 Z" fill="#1a1a1a"/>
+    <rect x="3" y="10" width="26" height="23" rx="1.5" fill="url(#metalSurface)"/>
+    <line x1="6" y1="13" x2="6" y2="30" stroke="#707070" stroke-width="0.3"/>
+    <line x1="10" y1="13" x2="10" y2="30" stroke="#707070" stroke-width="0.3"/>
+    <line x1="14" y1="13" x2="14" y2="30" stroke="#707070" stroke-width="0.3"/>
+    <line x1="18" y1="13" x2="18" y2="30" stroke="#707070" stroke-width="0.3"/>
+    <animateTransform attributeName="transform" type="translate" 
+      values="1190,260; 1190,255; 1190,260" dur="5.5s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- CASSETTE TAPES -->
+  <!-- Cassette 1 - Top -->
+  <g transform="translate(580, 60)" filter="url(#depth3d)" opacity="0.7">
+    <rect x="0" y="0" width="50" height="32" rx="1.5" fill="url(#cassettePlastic)" stroke="#404040" stroke-width="1"/>
+    <circle cx="13" cy="16" r="7" fill="none" stroke="#606060" stroke-width="1"/>
+    <circle cx="13" cy="16" r="3.5" fill="#2a2a2a"/>
+    <circle cx="37" cy="16" r="7" fill="none" stroke="#606060" stroke-width="1"/>
+    <circle cx="37" cy="16" r="3.5" fill="#2a2a2a"/>
+    <rect x="9" y="9" width="32" height="14" rx="0.8" fill="rgba(60,60,60,0.6)" stroke="#505050" stroke-width="0.6"/>
+    <rect x="4" y="26" width="42" height="3" fill="rgba(150,150,150,0.3)"/>
+    <animateTransform attributeName="transform" type="translate" 
+      values="580,60; 580,55; 580,60" dur="6s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Cassette 2 - Bottom Right -->
+  <g transform="translate(1090, 310)" filter="url(#depth3d)" opacity="0.6">
+    <rect x="0" y="0" width="45" height="28" rx="1.5" fill="url(#cassettePlastic)" stroke="#404040" stroke-width="1"/>
+    <circle cx="11" cy="14" r="6" fill="none" stroke="#606060" stroke-width="1"/>
+    <circle cx="11" cy="14" r="3" fill="#2a2a2a"/>
+    <circle cx="34" cy="14" r="6" fill="none" stroke="#606060" stroke-width="1"/>
+    <circle cx="34" cy="14" r="3" fill="#2a2a2a"/>
+    <rect x="8" y="8" width="29" height="12" rx="0.8" fill="rgba(60,60,60,0.6)" stroke="#505050" stroke-width="0.5"/>
+    <rect x="3" y="23" width="39" height="3" fill="rgba(150,150,150,0.3)"/>
+    <animateTransform attributeName="transform" type="translate" 
+      values="1090,310; 1090,305; 1090,310" dur="5.5s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- 4-POINT STARS scattered throughout -->
+  <!-- Star 1 - Top Left -->
+  <g transform="translate(240, 120)" filter="url(#glow)">
+    <path d="M 0 -22 L 4 -4 L 22 0 L 4 4 L 0 22 L -4 4 L -22 0 L -4 -4 Z" 
+          fill="url(#star4Point)" stroke="#404040" stroke-width="1.2">
+      <animateTransform attributeName="transform" type="rotate" 
+        values="0 0 0; 360 0 0" dur="20s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Star 2 - Top Right -->
+  <g transform="translate(1160, 140)" filter="url(#glow)">
+    <path d="M 0 -20 L 3 -3 L 20 0 L 3 3 L 0 20 L -3 3 L -20 0 L -3 -3 Z" 
+          fill="url(#star4Point)" stroke="#404040" stroke-width="1.2">
+      <animateTransform attributeName="transform" type="rotate" 
+        values="360 0 0; 0 0 0" dur="18s" repeatCount="indefinite"/>
+    </path>
+    <ellipse cx="0" cy="-10" rx="5" ry="2.5" fill="rgba(255,255,255,0.6)" opacity="0.7"/>
+  </g>
+  
+  <!-- Star 3 - Bottom Left -->
+  <g transform="translate(300, 320)" filter="url(#glow)">
+    <path d="M 0 -15 L 3 -3 L 15 0 L 3 3 L 0 15 L -3 3 L -15 0 L -3 -3 Z" 
+          fill="url(#star4Point)" stroke="#505050" stroke-width="1" opacity="0.8">
+      <animateTransform attributeName="transform" type="rotate" 
+        values="0 0 0; 360 0 0" dur="15s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Star 4 - Mid Right -->
+  <g transform="translate(980, 280)" filter="url(#glow)">
+    <path d="M 0 -18 L 3 -3 L 18 0 L 3 3 L 0 18 L -3 3 L -18 0 L -3 -3 Z" 
+          fill="url(#star4Point)" stroke="#505050" stroke-width="1" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" 
+        values="360 0 0; 0 0 0" dur="16s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Star 5 - Mid Top -->
+  <g transform="translate(850, 100)" filter="url(#glow)">
+    <path d="M 0 -16 L 3 -3 L 16 0 L 3 3 L 0 16 L -3 3 L -16 0 L -3 -3 Z" 
+          fill="url(#star4Point)" stroke="#505050" stroke-width="1" opacity="0.75">
+      <animateTransform attributeName="transform" type="rotate" 
+        values="0 0 0; 360 0 0" dur="17s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Star 6 - Small accent -->
+  <g transform="translate(450, 280)" filter="url(#glow)">
+    <path d="M 0 -12 L 2 -2 L 12 0 L 2 2 L 0 12 L -2 2 L -12 0 L -2 -2 Z" 
+          fill="url(#star4Point)" stroke="#606060" stroke-width="0.8" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" 
+        values="360 0 0; 0 0 0" dur="14s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Additional small decorative particles -->
+  <circle cx="360" cy="180" r="1.5" fill="#c0c0c0" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="780" cy="240" r="1.8" fill="#e0e0e0" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1020" cy="160" r="1.5" fill="#c0c0c0" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- MAIN TEXT with extreme 3D chrome effect -->
+  <g filter="url(#depth3d)">
+    <!-- Shadow layers -->
+    <text x="704" y="214" font-family="'Arial Black', 'Impact', sans-serif" font-size="90" 
+          font-weight="900" fill="#000000" text-anchor="middle" letter-spacing="4" opacity="0.8">
+      AI &amp; ML Developer
+    </text>
+    <text x="702" y="212" font-family="'Arial Black', 'Impact', sans-serif" font-size="90" 
+          font-weight="900" fill="#1a1a1a" text-anchor="middle" letter-spacing="4" opacity="0.6">
+      AI &amp; ML Developer
+    </text>
+    
+    <!-- Main chrome text -->
+    <text x="700" y="210" font-family="'Arial Black', 'Impact', sans-serif" font-size="90" 
+          font-weight="900" fill="url(#chromeText)" text-anchor="middle" letter-spacing="4"
+          stroke="#404040" stroke-width="1">
+      AI &amp; ML Developer
+    </text>
+    
+    <!-- Animated highlight shine -->
+    <text x="700" y="210" font-family="'Arial Black', 'Impact', sans-serif" font-size="90" 
+          font-weight="900" fill="url(#liquidSilver)" text-anchor="middle" letter-spacing="4" opacity="0.3">
+      AI &amp; ML Developer
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+    </text>
+  </g>
+  
+  <!-- Decorative accent lines -->
+  <line x1="280" y1="200" x2="450" y2="200" stroke="url(#liquidSilver)" stroke-width="2" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <line x1="950" y1="200" x2="1120" y2="200" stroke="url(#liquidSilver)" stroke-width="2" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="3s" repeatCount="indefinite"/>
+  </line>
+</svg>
